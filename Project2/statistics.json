@@ -1,0 +1,26 @@
+{
+  "AverageAge": 29.6,
+  "YoungestPersons": [
+    "Bob",
+    "David",
+    "Mallory",
+    "Zara"
+  ],
+  "OldestPersons": [
+    "Ivan",
+    "Judy"
+  ],
+  "AverageSalary": 60100,
+  "HighestSalaryPersons": [
+    "Ivan",
+    "Judy"
+  ],
+  "LowestSalaryPersons": [
+    "David",
+    "Mallory",
+    "Zara"
+  ],
+  "EducationLevelCounts": {
+    "": 20
+  }
+}
