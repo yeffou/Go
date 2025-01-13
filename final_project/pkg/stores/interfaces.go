@@ -23,6 +23,7 @@ type BookStore interface {
 	ListBooks() []models.Book
 	SaveToFile(filePath string) error
 	LoadFromFile(filePath string) error
+	SearchBooksByCriteria(criteria models.SearchCriteria) []models.Book
 }
 
 type CustomerStore interface {
