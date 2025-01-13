@@ -1,0 +1,84 @@
+{
+  "1": {
+    "id": 1,
+    "customer": {
+      "id": 1,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "address": {
+        "street": "123 Elm Street",
+        "city": "Springfield",
+        "state": "IL",
+        "postal_code": "62704",
+        "country": "USA"
+      },
+      "created_at": "2023-01-15T14:30:00Z"
+    },
+    "items": [
+      {
+        "book": {
+          "id": 1,
+          "title": "The Great Gatsby",
+          "author": {
+            "id": 1,
+            "first_name": "F. Scott",
+            "last_name": "Fitzgerald",
+            "bio": "American novelist, widely regarded as one of the greatest writers of the 20th century."
+          },
+          "genres": [
+            "Fiction",
+            "Classic"
+          ],
+          "published_at": "1925-04-10T00:00:00Z",
+          "price": 10.99,
+          "stock": 50
+        },
+        "quantity": 2
+      }
+    ],
+    "total_price": 21.98,
+    "created_at": "2025-01-13T02:35:23.5770507+01:00",
+    "status": "Completed"
+  },
+  "2": {
+    "id": 2,
+    "customer": {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "address": {
+        "street": "456 Oak Avenue",
+        "city": "Shelbyville",
+        "state": "IL",
+        "postal_code": "62705",
+        "country": "USA"
+      },
+      "created_at": "2023-02-20T10:15:00Z"
+    },
+    "items": [
+      {
+        "book": {
+          "id": 2,
+          "title": "1984",
+          "author": {
+            "id": 2,
+            "first_name": "George",
+            "last_name": "Orwell",
+            "bio": "English novelist, essayist, and critic, known for his satirical works."
+          },
+          "genres": [
+            "Fiction",
+            "Dystopian"
+          ],
+          "published_at": "1949-06-08T00:00:00Z",
+          "price": 8.99,
+          "stock": 100
+        },
+        "quantity": 1
+      }
+    ],
+    "total_price": 8.99,
+    "created_at": "2025-01-13T02:35:37.5305965+01:00",
+    "status": "Pending"
+  }
+}

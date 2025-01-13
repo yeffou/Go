@@ -1,0 +1,15 @@
+{
+  "1": {
+    "id": 1,
+    "name": "AAA Johnson",
+    "email": "alice.johnson@example.com",
+    "address": {
+      "street": "123 Elm Street",
+      "city": "Springfield",
+      "state": "IL",
+      "postal_code": "62704",
+      "country": "USA"
+    },
+    "created_at": "2023-01-15T14:30:00Z"
+  }
+}

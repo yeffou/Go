@@ -1,0 +1,19 @@
+{
+  "2": {
+    "id": 2,
+    "title": "waaa3er jaafar",
+    "author": {
+      "id": 1,
+      "first_name": "F. Scott",
+      "last_name": "Fitzgerald",
+      "bio": "American novelist, widely regarded as one of the greatest writers of the 20th century."
+    },
+    "genres": [
+      "Fiction",
+      "Classic"
+    ],
+    "published_at": "1925-04-10T00:00:00Z",
+    "price": 10.99,
+    "stock": 50
+  }
+}

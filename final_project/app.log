@@ -1,0 +1,28 @@
+LOG: 2025/01/13 01:55:21 logger.go:19: INFO: HandleGetAuthors called
+LOG: 2025/01/13 01:55:21 logger.go:19: INFO: Authors retrieved successfully
+LOG: 2025/01/13 01:55:39 logger.go:19: INFO: HandleGetAuthor called
+LOG: 2025/01/13 01:55:44 logger.go:19: INFO: HandleGetAuthor called
+LOG: 2025/01/13 01:55:44 logger.go:19: INFO: Author retrieved successfully
+LOG: 2025/01/13 01:55:46 logger.go:19: INFO: HandleGetAuthor called
+LOG: 2025/01/13 01:55:57 logger.go:19: INFO: HandleGetAuthors called
+LOG: 2025/01/13 01:55:57 logger.go:19: INFO: Authors retrieved successfully
+LOG: 2025/01/13 01:56:06 logger.go:19: INFO: HandleGetOrders called
+LOG: 2025/01/13 01:56:06 logger.go:19: INFO: Orders retrieved successfully
+LOG: 2025/01/13 01:56:09 logger.go:19: INFO: HandleGetOrder called
+LOG: 2025/01/13 01:56:09 logger.go:19: INFO: Order retrieved successfully
+LOG: 2025/01/13 01:56:10 logger.go:19: INFO: HandleGetOrder called
+LOG: 2025/01/13 01:56:12 logger.go:19: INFO: HandleGetOrder called
+LOG: 2025/01/13 01:56:12 logger.go:19: INFO: Order retrieved successfully
+LOG: 2025/01/13 01:56:25 logger.go:19: INFO: HandleDeleteOrder called
+LOG: 2025/01/13 01:56:25 logger.go:19: INFO: Order deleted successfully
+LOG: 2025/01/13 01:56:31 logger.go:19: INFO: HandleDeleteBook called
+LOG: 2025/01/13 01:58:46 logger.go:19: INFO: HandleGetAuthors called
+LOG: 2025/01/13 01:58:46 logger.go:19: INFO: Authors retrieved successfully
+LOG: 2025/01/13 01:58:49 logger.go:19: INFO: HandleGetAuthor called
+LOG: 2025/01/13 01:58:53 logger.go:19: INFO: HandleGetAuthor called
+LOG: 2025/01/13 01:58:54 logger.go:19: INFO: HandleGetAuthor called
+LOG: 2025/01/13 03:04:54 logger.go:19: INFO: Waiting until next report generation: 21h55m5.0696975s
+LOG: 2025/01/13 03:05:19 logger.go:19: INFO: HandleGenerateReport called
+LOG: 2025/01/13 03:05:19 logger.go:19: INFO: Sales report generated successfully
+LOG: 2025/01/13 03:05:36 logger.go:19: INFO: HandleGetBooks called
+LOG: 2025/01/13 03:05:36 logger.go:19: INFO: Books retrieved successfully
