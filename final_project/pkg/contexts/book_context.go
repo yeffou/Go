@@ -37,3 +37,6 @@ func (ctx *BookContext) DeleteBook(ctxContext context.Context, id int) bool {
 func (ctx *BookContext) ListBooks(ctxContext context.Context) []models.Book {
 	return ctx.Store.ListBooks()
 }
+func (ctx *BookContext) SearchBooksByCriteria(ctxContext context.Context, criteria models.SearchCriteria) []models.Book {
+	return ctx.Store.SearchBooksByCriteria(criteria)
+}
