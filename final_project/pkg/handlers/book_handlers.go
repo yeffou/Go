@@ -92,6 +92,33 @@ func (h *BookHandler) HandleGetBook(w http.ResponseWriter, r *http.Request) {
 	utils.LogInfo("Book retrieved successfully")
 }
 
+func (h *BookHandler) HandleSearchBooks(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		WriteErrorResponse(w, http.StatusMethodNotAllowed, "Method not allowed")
+		return
+	}
+	query := r.URL.Query()
+
+	criteria := models.SearchCriteria{
+		Title:  strings.TrimSpace(query.Get("title")),
+		Author: strings.TrimSpace(query.Get("author")),
+	}
+
+	if yearStr := query.Get("year"); yearStr != "" {
+		year, err := strconv.Atoi(yearStr)
+		if err != nil {
+			WriteErrorResponse(w, http.StatusBadRequest, "Invalid year parameter")
+			return
+		}
+		criteria.Year = year
+	}
+
+	results := h.Context.SearchBooksByCriteria(r.Context(), criteria)
+
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(results)
+}
+
 func (h *BookHandler) HandleUpdateBook(w http.ResponseWriter, r *http.Request) {
 	utils.LogInfo("HandleUpdateBook called")
 	if r.Method != http.MethodPut {
