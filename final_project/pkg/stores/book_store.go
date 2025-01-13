@@ -27,6 +27,8 @@ func NewBookStore(filePath string) BookStore {
 	return store
 }
 
+
+
 func (s *bookStore) CreateBook(book models.Book) models.Book {
 	s.mu.Lock()
 	defer s.mu.Unlock()
@@ -49,6 +51,31 @@ func (s *bookStore) GetBook(id int) (models.Book, bool) {
 	return book, exists
 }
 
+func (s *bookStore) SearchBooksByCriteria(criteria models.SearchCriteria) []models.Book {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	results := []models.Book{}
+	for _, book := range s.books {
+		match := true
+
+		if criteria.Title != "" && !strings.Contains(strings.ToLower(book.Title), strings.ToLower(criteria.Title)) {
+			match = false
+		}
+		if criteria.Author != "" && !strings.Contains(strings.ToLower(book.Author.FirstName+" "+book.Author.LastName), strings.ToLower(criteria.Author)) {
+			match = false
+		}
+		if criteria.Year != 0 && book.PublishedAt.Year() != criteria.Year {
+			match = false
+		}
+
+		if match {
+			results = append(results, book)
+		}
+	}
+
+	return results
+}
 func (s *bookStore) UpdateBook(id int, book models.Book) bool {
 	s.mu.Lock()
 	defer s.mu.Unlock()
