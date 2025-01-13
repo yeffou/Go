@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"sync"
+	"strings"
 )
 
 type bookStore struct {
