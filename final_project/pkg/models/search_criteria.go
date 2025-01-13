@@ -1,7 +1,7 @@
 package models
 
 type SearchCriteria struct {
-	Title  string `json:"title"`
-	Author string `json:"author"`
-	Genre  string `json:"genre"`
+	Title  string `json:"title,omitempty"`
+	Author string `json:"author,omitempty"`
+	Year   int    `json:"year,omitempty"`
 }
