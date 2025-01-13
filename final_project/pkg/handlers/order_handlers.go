@@ -163,3 +163,42 @@ func (h *OrderHandler) HandleDeleteOrder(w http.ResponseWriter, r *http.Request)
 	w.WriteHeader(http.StatusNoContent)
 	utils.LogInfo("Order deleted successfully")
 }
+
+func (h *OrderHandler) HandleGetOrdersByDateRange(w http.ResponseWriter, r *http.Request) {
+	utils.LogInfo("HandleGetOrdersByDateRange called")
+
+	if r.Method != http.MethodGet {
+		WriteErrorResponse(w, http.StatusMethodNotAllowed, "Method not allowed")
+		utils.LogError(nil)
+		return
+	}
+
+	fromStr := r.URL.Query().Get("from")
+	toStr := r.URL.Query().Get("to")
+
+	if fromStr == "" || toStr == "" {
+		WriteErrorResponse(w, http.StatusBadRequest, "Missing 'from' or 'to' query parameters")
+		utils.LogError(nil)
+		return
+	}
+
+	from, err := time.Parse(time.RFC3339, fromStr)
+	if err != nil {
+		WriteErrorResponse(w, http.StatusBadRequest, "Invalid 'from' date format")
+		utils.LogError(err)
+		return
+	}
+
+	to, err := time.Parse(time.RFC3339, toStr)
+	if err != nil {
+		WriteErrorResponse(w, http.StatusBadRequest, "Invalid 'to' date format")
+		utils.LogError(err)
+		return
+	}
+
+	orders := h.Context.GetOrdersByDateRange(r.Context(), from, to)
+
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(orders)
+	utils.LogInfo("Orders retrieved by date range successfully")
+}
